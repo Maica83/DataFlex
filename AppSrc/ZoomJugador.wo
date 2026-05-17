@@ -73,7 +73,7 @@ Object oZoomJugador is a cWebView
             Set pbPromptButton to True
 
 // ToDo: Fill in the from-child parent Select view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oSelectView
+            WebRegisterPath ntNavigateForward oSelectEquipo
 
             Procedure OnPrompt
                 Send NavigatePath
@@ -123,6 +123,18 @@ Object oZoomJugador is a cWebView
             End_Procedure
 
         End_Object 
+        
+        Object oPosicionBtn is a cWebMenuItem
+            Set psCSSClass to "WebClearMenuItem"
+            Set psCaption to "Posicion"
+    
+            WebRegisterPath ntNavigateForwardCustom oSelectPosicion
+    
+            Procedure OnClick
+            Send NavigatePath
+            End_Procedure
+
+        End_Object
     End_Object 
 
     Procedure SetActionButtons
