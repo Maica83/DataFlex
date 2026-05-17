@@ -37,19 +37,19 @@ Object oSelectEquipo is a cWebView
         Set psCSSClass to "MobileList"
         Set pbServerOnRowClick to True
         Set pbFillHeight to True
-        Set pbShowHeader to False
+        Set pbShowHeader to True
         Set piSortColumn to 0
 
         Object oequipoNombre is a cWebColumn
             Entry_Item equipo.Nombre
             Set psCaption to "equipo.Nombre"
-            Set piWidth to 100
+            Set piWidth to 50
         End_Object 
 
         Object oligaID is a cWebColumn
             Entry_Item liga.ID
             Set psCaption to "equipo.LigaID"
-            Set piWidth to 100
+            Set piWidth to 50
         End_Object 
 
         Object oDetailButton is a cWebColumnButton
@@ -62,7 +62,7 @@ Object oSelectEquipo is a cWebView
             Set peAlign to alignRight
 
 // ToDo: Fill in the from-main Zoom view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oZoomView
+            WebRegisterPath ntNavigateForward oZoomEquipo
 
             Procedure OnClick
                 Send NavigatePath
@@ -74,7 +74,7 @@ Object oSelectEquipo is a cWebView
 
         End_Object 
 
-        WebRegisterPath ntNavigateForward oZoomEquipo
+//        WebRegisterPath ntNavigateForward oZoomEquipo
 
         Procedure OnRowClick String sRowId
             tWebNavigateData NavigateData
@@ -122,7 +122,7 @@ Object oSelectEquipo is a cWebView
             Set psCaption to "New"
 
 // ToDo: Fill in the from-main Zoom view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oZoomView
+            WebRegisterPath ntNavigateForward oZoomEquipo
 
             Procedure OnClick
                 Send NavigatePath

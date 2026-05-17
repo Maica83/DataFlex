@@ -32,13 +32,13 @@ Object oSelectPosicion is a cWebView
         Set psCSSClass to "MobileList"
         Set pbServerOnRowClick to True
         Set pbFillHeight to True
-        Set pbShowHeader to False
+        Set pbShowHeader to True
         Set piSortColumn to 0
 
         Object oposicionNombre is a cWebColumn
             Entry_Item posicion.Nombre
             Set psCaption to "posicion.Nombre"
-            Set piWidth to 500
+            Set piWidth to 150
         End_Object 
 
         Object oDetailButton is a cWebColumnButton
@@ -51,7 +51,7 @@ Object oSelectPosicion is a cWebView
             Set peAlign to alignRight
 
 // ToDo: Fill in the from-main Zoom view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oZoomView
+            WebRegisterPath ntNavigateForward oZoomPosicion
 
             Procedure OnClick
                 Send NavigatePath
@@ -63,7 +63,7 @@ Object oSelectPosicion is a cWebView
 
         End_Object 
 
-        WebRegisterPath ntNavigateForward oZoomPosicion
+//        WebRegisterPath ntNavigateForward oZoomPosicion
 
         Procedure OnRowClick String sRowId
             tWebNavigateData NavigateData
@@ -111,7 +111,7 @@ Object oSelectPosicion is a cWebView
             Set psCaption to "New"
 
 // ToDo: Fill in the from-main Zoom view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oZoomView
+            WebRegisterPath ntNavigateForward oZoomPosicion
 
             Procedure OnClick
                 Send NavigatePath

@@ -42,25 +42,25 @@ Object oSelectJugador is a cWebView
         Set psCSSClass to "MobileList"
         Set pbServerOnRowClick to True
         Set pbFillHeight to True
-        Set pbShowHeader to False
+        Set pbShowHeader to True
         Set piSortColumn to 0
 
         Object ojugadorNombre is a cWebColumn
             Entry_Item jugador.Nombre
             Set psCaption to "jugador.Nombre"
-            Set piWidth to 600
+            Set piWidth to 100
         End_Object 
 
         Object ojugadorApellido is a cWebColumn
             Entry_Item jugador.Apellido
             Set psCaption to "jugador.Apellido"
-            Set piWidth to 600
+            Set piWidth to 100
         End_Object 
 
         Object ojugadorNacionalidad is a cWebColumn
             Entry_Item jugador.Nacionalidad
             Set psCaption to "jugador.Nacionalidad"
-            Set piWidth to 500
+            Set piWidth to 100
         End_Object 
 
         Object oequipoID is a cWebColumn
@@ -79,7 +79,7 @@ Object oSelectJugador is a cWebView
             Set peAlign to alignRight
 
 // ToDo: Fill in the from-main Zoom view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oZoomView
+            WebRegisterPath ntNavigateForward oZoomJugador
 
             Procedure OnClick
                 Send NavigatePath
@@ -91,7 +91,7 @@ Object oSelectJugador is a cWebView
 
         End_Object 
 
-        WebRegisterPath ntNavigateForward oZoomJugador
+//        WebRegisterPath ntNavigateForward oZoomJugador
 
         Procedure OnRowClick String sRowId
             tWebNavigateData NavigateData
@@ -139,7 +139,7 @@ Object oSelectJugador is a cWebView
             Set psCaption to "New"
 
 // ToDo: Fill in the from-main Zoom view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oZoomView
+            WebRegisterPath ntNavigateForward oZoomJugador
 
             Procedure OnClick
                 Send NavigatePath
