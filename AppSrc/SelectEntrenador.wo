@@ -44,35 +44,35 @@ Object oSelectEntrenador is a cWebView
         Set pbShowHeader to True
         Set piSortColumn to 0
 
-        Object oligaID is a cWebColumn
-            Entry_Item liga.ID
-            Set psCaption to "liga.ID"
+        Object oentrenadorID is a cWebColumn
+            Entry_Item entrenador.ID
+            Set psCaption to "ID"
             Set piWidth to 100
-        End_Object 
+        End_Object
 
-        Object oligaNombre is a cWebColumn
-            Entry_Item liga.Nombre
-            Set psCaption to "liga.Nombre"
+        Object oentrenadorNombre is a cWebColumn
+            Entry_Item entrenador.Nombre
+            Set psCaption to "Nombre"
             Set piWidth to 150
-        End_Object 
+        End_Object
 
-        Object oligaPais is a cWebColumn
-            Entry_Item liga.Pais
-            Set psCaption to "liga.Pais"
+        Object oentrenadorApellido is a cWebColumn
+            Entry_Item entrenador.Apellido
+            Set psCaption to "Apellido"
             Set piWidth to 150
-        End_Object 
+        End_Object
 
-        Object oligaEquipos is a cWebColumn
-            Entry_Item liga.Equipos
-            Set psCaption to "liga.Equipos"
-            Set piWidth to 100
-        End_Object 
+        Object oentrenadorNacionalidad is a cWebColumn
+            Entry_Item entrenador.Nacionalidad
+            Set psCaption to "Nacionalidad"
+            Set piWidth to 150
+        End_Object
 
-        Object oligaEquiposMax is a cWebColumn
-            Entry_Item liga.EquiposMax
-            Set psCaption to "liga.EquiposMax"
+        Object oentrenadorEquipoID is a cWebColumn
+            Entry_Item entrenador.EquipoID
+            Set psCaption to "EquipoID"
             Set piWidth to 100
-        End_Object 
+        End_Object
 
         Object oDetailButton is a cWebColumnButton
             Set psCaption to "btn"
@@ -85,7 +85,7 @@ Object oSelectEntrenador is a cWebView
             Set peAlign to alignRight
 
 // ToDo: Fill in the from-main Zoom view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oZoomView
+            WebRegisterPath ntNavigateForward oZoomEntrenador
 
             Procedure OnClick
                 Send NavigatePath
@@ -98,7 +98,7 @@ Object oSelectEntrenador is a cWebView
         End_Object 
 
 // ToDo: Fill in the from-parent child Select view object name for navigate forward
-//        WebRegisterPath ntNavigateForward oSelectView
+//        WebRegisterPath ntNavigateForward oSelectEntrenador
 
         Procedure OnRowClick String sRowId
             tWebNavigateData NavigateData
@@ -150,7 +150,7 @@ Error DFERR_PROGRAM "NavigateForward to this from-parent child Select view not y
             Set psCaption to "New"
 
 // ToDo: Fill in the from-main Zoom view object name for navigate forward
-//            WebRegisterPath ntNavigateForward oZoomView
+            WebRegisterPath ntNavigateForward oZoomEntrenador
 
             Procedure OnClick
                 Send NavigatePath
